@@ -10,21 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mysten/dapp-kit": "^0.14.11",
-    "@tanstack/react-query": "^5.51.1",
+    "@mysten/dapp-kit": "^0.14.13",
+    "@tanstack/react-query": "^5.51.15",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "viem": "2.x",
+    "wagmi": "^2.12.1"
   },
   "devDependencies": {
-    "@mysten/sui": "^1.2.1",
+    "@mysten/sui": "^1.3.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   }
