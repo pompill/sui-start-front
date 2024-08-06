@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+input:focus {
+  outline: none; /* 移除默认的轮廓 */
+  border-color: blue; /* 改变边框颜色 */
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.2); /* 添加阴影效果 */
+}

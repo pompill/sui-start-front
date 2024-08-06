@@ -11,8 +11,8 @@ let dOrderId = ""//要约定订单id规则，链上生成
 let tx = new Transaction();
 tx.moveCall({
     target: Package+"::bridge::transferCoin",//方法
-    arguments: [tx.object("0xf9e2f328443891e0677d30eea9be8fa7913c028703b9ba6aef1cc9f300438fda"),//管理员权限
-        tx.object("0x128b14c11f36e4cff559b8dfea3a2a0cc862199835e79491e59c91c9c76d83f0"),//池子
+    arguments: [tx.object("0x7aa1a356af39bbc448db9ccb1ace4165553eb1b56b5ecb0dbe03724cef8fd6cf"),//管理员权限
+        tx.object("0x899606692894cbfd5c2966ff846ff5da39b5dd49351c18d87746fe840eca99b5"),//池子
         tx.pure(amount),//转账金额数目
         tx.object("0x66518bb6067107b8c19c548204e61f1803865269336ad5876ef4f227e9c7bb6b"),//转账地址
         tx.pure(dOrderId),//订单id

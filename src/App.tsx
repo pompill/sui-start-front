@@ -1,6 +1,8 @@
 import { useState, ChangeEvent } from "react";
 import { ConnectButton } from "@mysten/dapp-kit";
 import { POLYGON_TOKENS, POLYGON_TOKENS_BY_SYMBOL } from "./lib/constants";
+import { Transaction } from '@mysten/sui/transactions';
+import { getFullnodeUrl, SuiClient } from '@mysten/sui/client';
 import {
   useAccount,
   useDisconnect,
@@ -58,6 +60,36 @@ function App() {
   function handleBuyTokenChange(e: ChangeEvent<HTMLSelectElement>) {
     setBuyToken(e.target.value);
   }
+  const handleSubmit = () => {
+    console.log('按钮被点击了！');
+    // 这里可以添加提交表单的逻辑
+    const keypair = ""
+    console.log("sellAmount", sellAmount)
+    deposit(keypair, sellAmount)
+  };
+
+  const deposit = async (keypair : string, amount : any) => {
+    let tx = new Transaction();
+    const Package = "0x42955917709799299da0772a23e2d8dd1c2f6a253b1cecbeff16127b4fd595ab"
+     // use getFullnodeUrl to define Devnet RPC location
+     const rpcUrl = getFullnodeUrl('testnet');
+    
+     // create a client connected to devnet
+    const client = new SuiClient({ url: rpcUrl });
+    
+    tx.moveCall({
+        target: Package+"::bridge::deposit",//方法
+        arguments: [tx.object("[]"),//所有币种，先传过去，或者加起来要大于输入的金额
+            tx.object("0x899606692894cbfd5c2966ff846ff5da39b5dd49351c18d87746fe840eca99b5"),//池子
+            tx.pure(amount),//转账金额数目
+            tx.object("0x6")//时间
+        ],
+        typeArguments: []// type arguments
+    })
+    tx.setGasBudget(3000000);
+    const result = await client.signAndExecuteTransaction({ signer: keypair, transaction: tx });
+    console.log("result",result)
+}
   return (
     <form>
       <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-md mb-3">
@@ -139,15 +171,13 @@ function App() {
             className="h-9 rounded-md bg-white cursor-not-allowed"
             style={{ border: "1px solid black" }}
             disabled
-            onChange={(e) => {
-              setTradeDirection("buy");
-              setBuyAmount(e.target.value);
-            }}
           />
         </section>
+        <button type="button" className="mt-4" onClick={handleSubmit}>确认</button>
       </div>
     </form>
   );
 }
+
 
 export default App;

@@ -21,6 +21,15 @@ interface Token {
 export const POLYGON_TOKENS: Token[] = [
   {
     chainId: 137,
+    name: "sui",
+    symbol: "sui",
+    decimals: 9,
+    address: "0x2::sui::SUI",
+    logoURI:
+      "https://strapi-dev.scand.app/uploads/Sui_System_ccdd6297a8.png",
+  },
+  {
+    chainId: 137,
     name: "Matic",
     symbol: "MATIC",
     decimals: 18,
@@ -76,6 +85,15 @@ export const POLYGON_TOKENS: Token[] = [
 ];
 
 export const POLYGON_TOKENS_BY_SYMBOL: Record<string, Token> = {
+  sui: {
+    chainId: 137,
+    name: "sui",
+    symbol: "sui",
+    decimals: 9,
+    address: "0x2::sui::SUI",
+    logoURI:
+      "https://strapi-dev.scand.app/uploads/Sui_System_ccdd6297a8.png",
+  },
   matic: {
     chainId: 137,
     name: "Matic",
@@ -133,6 +151,15 @@ export const POLYGON_TOKENS_BY_SYMBOL: Record<string, Token> = {
 };
 
 export const POLYGON_TOKENS_BY_ADDRESS: Record<string, Token> = {
+  "0x2::sui::SUI": {
+    chainId: 137,
+    name: "sui",
+    symbol: "sui",
+    decimals: 9,
+    address: "0x2::sui::SUI",
+    logoURI:
+      "https://strapi-dev.scand.app/uploads/Sui_System_ccdd6297a8.png",
+  },
   "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
     chainId: 137,
     name: "Matic",
