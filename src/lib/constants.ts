@@ -30,6 +30,15 @@ export const POLYGON_TOKENS: Token[] = [
   },
   {
     chainId: 137,
+    name: "Ethereum",
+    symbol: "ETH",
+    decimals: 18,
+    address: "0xqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+    logoURI:
+      "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
+  },
+  {
+    chainId: 137,
     name: "Matic",
     symbol: "MATIC",
     decimals: 18,
@@ -93,6 +102,15 @@ export const POLYGON_TOKENS_BY_SYMBOL: Record<string, Token> = {
     address: "0x2::sui::SUI",
     logoURI:
       "https://strapi-dev.scand.app/uploads/Sui_System_ccdd6297a8.png",
+  },
+  eth:{
+    chainId: 137,
+    name: "Ethereum",
+    symbol: "ETH",
+    decimals: 18,
+    address: "0xqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+    logoURI:
+      "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
   },
   matic: {
     chainId: 137,
@@ -159,6 +177,15 @@ export const POLYGON_TOKENS_BY_ADDRESS: Record<string, Token> = {
     address: "0x2::sui::SUI",
     logoURI:
       "https://strapi-dev.scand.app/uploads/Sui_System_ccdd6297a8.png",
+  },
+  "0xqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq": {
+    chainId: 137,
+    name: "Ethereum",
+    symbol: "eth",
+    decimals: 18,
+    address: "0xqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+    logoURI:
+      "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
   },
   "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
     chainId: 137,
