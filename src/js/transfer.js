@@ -7,8 +7,11 @@ const address = keypair.getPublicKey().toSuiAddress();
 console.log("address",address)
 
 const amount = 1 //这里是mist为单位 1sui = 100,000,000mist
-let dOrderId = ""//要约定订单id规则，链上生成
+let dOrderId = "123"//要约定订单id规则，链上生成
 let tx = new Transaction();
+
+const Package = '0x869d0f51fb8e0947a6e1726e1cb589c1fdb9bbe8ed9a99a62df5de93ae09eee1';
+
 tx.moveCall({
     target: Package+"::bridge::transferCoin",//方法
     arguments: [tx.object("0x7aa1a356af39bbc448db9ccb1ace4165553eb1b56b5ecb0dbe03724cef8fd6cf"),//管理员权限
