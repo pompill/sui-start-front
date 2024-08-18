@@ -60,7 +60,7 @@ async function deposit(keypair) {
       //     "0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910",
       //   ]),
       // tx.object("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
-      tx.object("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
+      tx.pure.string("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
       // tx.pure.address("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
       tx.object(
         "0x82e98c8dbdcb788d57c69bb179ee51b664b75ded7c6f79323853a2f0ad2322e8"
