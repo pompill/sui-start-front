@@ -51,16 +51,20 @@ async function deposit(keypair) {
       //       "0x44088c0f6e9d8eef8ec9807163d991915b601158a41bf4d10c660e592d83df45"
       //     ),
       //   ]),
-    //   tx.object(
-    //     "[0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910]"
-    //   ),
+      //   tx.object(
+      //     "[0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910]"
+      //   ),
       //   tx.object([
       //   ]),
       //   tx.pure("vector<string>", [
       //     "0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910",
       //   ]),
       // tx.object("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
-      tx.object("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
+      tx.makeMoveVec({
+        elements: [
+          "0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910",
+          ],
+      }),
       // tx.pure.address("0x2824f62511e421c4ec439896579d7ffee97e90945f4aeb630061aa5fb755e910"),
       tx.object(
         "0x82e98c8dbdcb788d57c69bb179ee51b664b75ded7c6f79323853a2f0ad2322e8"
